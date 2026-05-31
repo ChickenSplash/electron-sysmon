@@ -1,0 +1,15 @@
+# Dependencies — reinstalled from package.json with `npm install`
+node_modules/
+
+# Build output
+dist/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/

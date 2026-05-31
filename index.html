@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sysmon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>sysmon</h1>
+      </div>
+      <div class="meta" id="os-meta">reading system…</div>
+    </header>
+
+    <main class="grid">
+      <!-- CPU overall -->
+      <section class="panel cpu-panel">
+        <div class="panel-head">
+          <span class="label">CPU</span>
+          <span class="readout" id="cpu-pct">--<small>%</small></span>
+        </div>
+        <div class="bar"><div class="bar-fill" id="cpu-bar"></div></div>
+        <div class="subtle" id="cpu-name">—</div>
+
+        <!-- per-core mini bars -->
+        <div class="cores" id="cores"></div>
+      </section>
+
+      <!-- Memory -->
+      <section class="panel">
+        <div class="panel-head">
+          <span class="label">MEMORY</span>
+          <span class="readout" id="mem-pct">--<small>%</small></span>
+        </div>
+        <div class="bar"><div class="bar-fill alt" id="mem-bar"></div></div>
+        <div class="subtle" id="mem-detail">— / —</div>
+      </section>
+
+      <!-- Temperature -->
+      <section class="panel">
+        <div class="panel-head">
+          <span class="label">CPU TEMP</span>
+          <span class="readout" id="temp-val">--<small>°C</small></span>
+        </div>
+        <div class="bar"><div class="bar-fill warn" id="temp-bar"></div></div>
+        <div class="subtle" id="temp-note">—</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="status">● live</span>
+      <span id="tick">updated —</span>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
